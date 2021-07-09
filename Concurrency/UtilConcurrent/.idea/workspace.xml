@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb354a47-b6d4-4c31-9b6d-d044ada3b107" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Concurrency/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ProducerConsumer/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../InputOutput/NonBlockingInputOutput/ChainedPutMethods/.idea/ChainedPutMethods.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../InputOutput/NonBlockingInputOutput/ChainedPutMethods/ChainedPutMethods.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../InputOutput/NonBlockingInputOutput/DES/DES.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/AnotherThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/AnotherThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/Main$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/Main$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/MyRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/MyRunnable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/ThreadColor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Concurrency/out/production/Concurrency/com/umartariq/ThreadColor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Writer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/out/production/ProducerConsumer/com/umartariq/Writer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProducerConsumer/src/com/umartariq/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProducerConsumer/src/com/umartariq/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/MyConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/MyConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/MyProducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/MyProducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/ThreadColor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UtilConcurrent/com/umartariq/ThreadColor.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1ac3cLOfxKWjMbOzPDmrq7Ku1XX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.umartariq.Main" />
+      <module name="UtilConcurrent" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb354a47-b6d4-4c31-9b6d-d044ada3b107" name="Default Changelist" comment="" />
+      <created>1587021132386</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587021132386</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1599973817455">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1599973817455" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1599973817455">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1599973817455" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1599973817455">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1599973817455" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1599973817455">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1599973817455" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1599973606785">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1599973606785" />
+  </component>
+</project>

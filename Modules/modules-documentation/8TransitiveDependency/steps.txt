@@ -1,0 +1,55 @@
+open db module info
+
+add the keyword transitive to common dependency.
+
+change this : 
+
+module academy.learnprogramming.db {
+    exports academy.learnprogramming.db;
+    requires java.sql;
+    requires sqlite.jdbc;
+    requires academy.learnprogramming.common;
+}
+
+
+
+to this :
+
+module academy.learnprogramming.db {
+    exports academy.learnprogramming.db;
+    requires java.sql;
+    requires sqlite.jdbc;
+    requires transitive academy.learnprogramming.common;
+}
+
+
+
+
+and in the ui module-info change  :
+
+module academy.learnprogramming.ui {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires javafx.base;
+    requires javafx.graphics;
+    requires academy.learnprogramming.common;
+    requires academy.learnprogramming.db;
+
+    exports academy.learnprogramming.ui to javafx.graphics;
+    opens academy.learnprogramming.ui to javafx.fxml;
+}
+
+
+this to this :
+
+
+module academy.learnprogramming.ui {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires javafx.base;
+    requires javafx.graphics;
+    requires academy.learnprogramming.db;
+
+    exports academy.learnprogramming.ui to javafx.graphics;
+    opens academy.learnprogramming.ui to javafx.fxml;
+}

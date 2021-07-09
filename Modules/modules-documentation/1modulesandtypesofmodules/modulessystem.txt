@@ -1,0 +1,19 @@
+module system - called jigsaw
+the program component is called module
+
+a java application is a collection of modules.
+
+the module system was designed to have a reliable configuration
+strong encapsulation and a modular JDK/JRE. the purpose is to solve the problems typically involved with developing and deploying java applications before java 9.
+
+these modularity features in java 9 are collectively known as the java platform module system or jpms.
+
+
+a module is a named collection of data and code.
+
+can contain java code that is organized as a set of packages.
+each package can contain classes, interfaces and so on.
+
+you can think of a module as a  container of packages.
+
+

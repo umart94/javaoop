@@ -1,0 +1,28 @@
+create the new module
+
+CREATE THE MODULE DESCRIPTOR FIRST, Before adding the class files
+
+create academy.learnprogramming package
+
+NOW CUT THE db package from previous module, and paste it here.
+inside the  academy.learnprogramming package
+
+STEP1 : add module dependency for commons in the db module
+step2 : remove sqlite dependency from commons module
+step3 : add sqlite dependency jar in db module.
+
+
+if we add import academy.learnprogramming.db.Datasource;
+if we add dependency on module db, from 1st module.
+
+The problem is that the db module which is the second module has dependency on the commons module, the first module, already
+
+
+so if we also add dependency in the second db module this will create the problem of cyclic dependency and code will have errors.
+
+to fix this.
+
+we can use transitive dependencies
+
+
+or move code to another module.

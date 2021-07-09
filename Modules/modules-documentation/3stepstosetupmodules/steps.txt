@@ -1,0 +1,44 @@
+from welcome screen of intellij
+type ctrl+shift+a
+
+project from existing sources
+
+
+jdk 11 and later do not have javafx bundled with them
+
+so install jdk9.0.1
+
+suppose we have a <9 jdk project
+
+we can import it in intelliJ and make it use jdk9 with module features
+and intellij will configure the project.
+
+verify that libraries have been added
+verify that project jdk level is at 9
+verify that module jdk is jdk 9
+verify that language level is set to 9 - Modules.
+
+
+
+before jdk 9 we had to add the library as a project library
+
+now we have to add library in module -> dependencies -> add jar file -> set it to compile.
+
+
+
+now :
+if project level is set to jdk 9
+module level set to jdk 9
+language level set to jdk 9
+and all dependencies and libraries are added AS MODULE DEPENDENCIES.
+
+then this project will run successfully..
+
+
+
+otherwise it will give exception for any one of the dependencies that we added
+
+for e.g no suitable driver found. for jdb sqlite.
+
+so to fix that, add the dependency jar file to modoule library dependency instead of the project dependency.
+

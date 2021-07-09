@@ -1,0 +1,6 @@
+My name is Muhammad Umar Tariq
+this is data.txt file, a demo for non blocking input output
+we will use channel interface for file types in jdk.
+
+ fourth line
+ fifth line

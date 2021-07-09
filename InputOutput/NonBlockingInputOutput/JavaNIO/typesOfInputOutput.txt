@@ -1,0 +1,41 @@
+
+
+I see this is an old question, but I think something was missed here, that @nickdu attempted to point out but wasn't quite clear.
+
+There are four types of IO pertinent to this discussion:
+
+Blocking IO
+
+Non-Blocking IO
+
+Asynchronous IO
+
+Asynchronous Non-Blocking IO
+
+The confusion arises I think because of ambiguous definitions. So let me attempt to clarify that.
+
+First Let's talk about IO. When we have slow IO this is most apparent, but IO operations can either be blocking or non-blocking. This has nothing to do with threads, it has to do with the interface to the operating system. When I ask the OS for an IO operation I have the choice of waiting for all the data to be ready (blocking), or getting what is available right now and moving on (non-blocking). The default is blocking IO. It is much easier to write code using blocking IO as the path is much clearer. However, your code has to stop and wait for IO to complete. Non-Blocking IO requires interfacing with the IO libraries at a lower level, using select and read/write instead of the higher level libraries that provide convenient operations. Non-Blocking IO also implies that you have something you need to work on while the OS works on doing the IO. This might be multiple IO operations or computation on the IO that has completed.
+
+Blocking IO - The application waits for the OS to gather all the bytes to complete the operation or reach the end before continuing. This is default. To be more clear for the very technical, the system call that initiates the IO will install a signal handler waiting for a processor interrupt that will occur when the IO operation makes progress. Then the system call will begin a sleep which suspends operation of the current process for a period of time, or until the process interrupt occurs.
+
+Non-Blocking IO - The application tells the OS it only wants what bytes are available right now, and moves on while the OS concurrently gathers more bytes. The code uses select to determine what IO operations have bytes available. In this case the system call will again install a signal handler, but rather than sleep, it will associate the signal handler with the file handle, and immediately return. The process will become responsible for periodically checking the file handle for the interrupt flag having been set. This is usually done with a select call.
+
+Now Asynchronous is where the confusion begins. The general concept of asynchronous only implies that the process continues while the background operation is performed, the mechanism by which this occurs is not specific. The term is ambiguous as both non-blocking IO and threaded blocking IO can be considered to be asynchronous. Both allow concurrent operations, however the resource requirements are different, and the code is substantially different. Because you have asked a question "What is Non-Blocking Asynchronous IO", I am going to use a stricter definition for asynchronous, a threaded system performing IO which may or may not be non-blocking.
+
+The general definition
+
+Asynchronous IO - Programmatic IO which allows multiple concurrent IO operations to occur. IO operations are happening simultaneously, so that code is not waiting for data that is not ready.
+
+The stricter definition
+
+Asynchronous IO - Programmatic IO which uses threading or multiprocessing to allow concurrent IO operations to occur.
+
+Now with those clearer definitions we have the following four types of IO paradigms.
+
+Blocking IO - Standard single threaded IO in which the application waits for all IO operations to complete before moving on. Easy to code, no concurrency and so slow for applications that require multiple IO operations. The process or thread will sleep while waiting for the IO interrupt to occur.
+
+Asynchronous IO - Threaded IO in which the application uses threads of execution to perform Blocking IO operations concurrently. Requires thread safe code, but is generally easier to read and write than the alternative. Gains the overhead of multiple threads, but has clear execution paths. May require the use of synchronized methods and containers.
+
+Non-Blocking IO - Single threaded IO in which the application uses select to determine which IO operations are ready to advance, allowing the execution of other code or other IO operations while the OS processes concurrent IO. The process does not sleep while waiting for the IO interrupt, but takes on the responsibility to check for the IO flag on the filehandle. Much more complicated code due to the need to check the IO flag with select, though does not require thread-safe code or synchronized methods and containers. Low execution over-head at the expense of code complexity. Execution paths are convoluted.
+
+Asynchronous Non-Blocking IO - A hybrid approach to IO aimed at reducing complexity by using threads, while maintaining scalability by using non-blocking IO operations where possible. This would be the most complex type of IO requiring synchronized methods and containers, as well as convoluted execution paths. This is not the type of IO that one should consider coding lightly, and is most often only used when using a library that will mask the complexity, something like Futures and Promises.

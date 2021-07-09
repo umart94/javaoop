@@ -1,0 +1,45 @@
+lets say we have modules a, b and c
+
+A REQUIRES B
+
+A CAN READ PUBLIC AND PROTECTED TYPES EXPORTED IN MODULE B
+
+IF B ALSO REQUIRES C 
+
+B CAN HAVE METHODS THAT RETURN TYPES EXPORTED IN C
+
+
+
+modules common, db and ui
+
+db requires/ reads common
+
+while module ui reads both db and common
+
+module db or data source class has some methods that return types from module common
+
+so every module that uses data source class will require common module as well.
+
+
+
+so in that 3rd module that would need both commons and db
+we can use a transitive keyword instead of requires statement
+
+that way every module that reads db module will automatically be able to read common module.
+
+
+we will not have to explicitly require the common module everytime we have to use the db module. instead we can use transitive dependency.
+
+
+the db module requires common module
+and the ui module requires both the db and common module
+
+through transitive dependency, we import common only once in db module.
+
+
+suppose that 1 module requires 2 modules transitively.
+
+then, we can require that 1 module, and we wont have to require those other modules ( that were transitively required by that 1 module.)
+
+
+

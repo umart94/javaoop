@@ -1,0 +1,115 @@
+from academy.learnprogramming.common src folder.
+create new module-info.java module descriptor file.
+
+after its created and if its blank and we run project we will get errors
+
+so to fix this , 
+
+we are now using classes from jdk modules
+so we are getting that error
+ for e.g
+
+java: package javafx.beans.property is not visible
+  (package javafx.beans.property is declared in module javafx.base, but module academy.learnprogramming.common does not read it)
+
+we are not reading that module
+
+so we have to declare it with requires statement.
+
+we can do this automatically.
+
+
+module academy.learnprogramming.common {
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires java.sql;
+    requires javafx.controls;
+}
+
+
+do these imports for all
+
+and then rerun main class
+
+
+
+
+
+Caused by: java.lang.IllegalAccessException: class com.sun.javafx.application.LauncherImpl (in module javafx.graphics) cannot access class academy.learnprogramming.ui.Main (in module academy.learnprogramming.common) because module academy.learnprogramming.common does not export academy.learnprogramming.ui to module javafx.graphics
+
+JavaFX launcher cannot launch application because we did not export our package to javafx.graphics module
+
+if we dont export packages
+they cant be accessed by a module.
+
+to export a package we need to use export statement.
+
+now module-info.java looks like this.
+
+
+module academy.learnprogramming.common {
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires java.sql;
+    requires javafx.controls;
+    
+    exports academy.learnprogramming.ui to javafx.graphics;
+}
+
+using another export statement will lead to error so do it this way 
+
+
+module academy.learnprogramming.common {
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires java.sql;
+    requires javafx.controls;
+
+    exports academy.learnprogramming.ui to javafx.graphics, javafx.fxml;
+}
+
+
+
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field private javafx.scene.control.TableView academy.learnprogramming.ui.Controller.artistTable accessible: module academy.learnprogramming.common does not "opens academy.learnprogramming.ui" to module javafx.fxml
+
+
+
+we have to open the package ui to javafx.fxml
+
+because fxml loader needs to set fields with @FXML notation
+
+if we dont open the package, it cannot set fields
+
+
+
+module academy.learnprogramming.common {
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires java.sql;
+    requires javafx.controls;
+
+    exports academy.learnprogramming.ui to javafx.graphics, javafx.fxml;
+    opens academy.learnprogramming.ui to javafx.fxml;
+}
+
+
+Caused by: java.lang.IllegalAccessException: module javafx.base cannot access class academy.learnprogramming.common.Artist (in module academy.learnprogramming.common) because module academy.learnprogramming.common does not open academy.learnprogramming.common to javafx.base
+
+
+
+
+module academy.learnprogramming.common {
+    requires javafx.base;
+    requires javafx.graphics;
+    requires javafx.fxml;
+    requires java.sql;
+    requires javafx.controls;
+
+    exports academy.learnprogramming.ui to javafx.graphics, javafx.fxml;
+    opens academy.learnprogramming.ui to javafx.fxml;
+    opens academy.learnprogramming.common to javafx.base;
+}

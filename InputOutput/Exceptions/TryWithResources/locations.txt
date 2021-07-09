@@ -1,0 +1,6 @@
+0,You are sitting in front of a computer learning Java
+1,You are Standing At the end of a road Infront Of A Small Brick Building
+2,You are At the Top of a Hill
+3,You are inside a building, a well house for a small spring
+4,You are in a valley beside a stream
+5,You are In a Forest

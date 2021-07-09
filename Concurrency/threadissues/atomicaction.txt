@@ -1,0 +1,11 @@
+when a thread is running, it can be suspended when its in the middle of doing something
+
+if a thread calls the system.out.println method , it can be suspended in the middle of executing the method it may have evaluated the argument thats being passed.
+but its suspended before it can print the result.
+
+it can be partway through evaluating the argument when its suspended essentially , system.out.println is not an atomic action.
+
+an atomic action cannot be suspended in the middle of being executed it either completes or it doesnt happen at all. once a thread starts to run an atomic action
+we can be confident that it wont be suspended until it has completed the action.
+
+

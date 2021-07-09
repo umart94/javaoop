@@ -1,0 +1,16 @@
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <Button text="Get Employee Names" onAction="#buttonPressed" GridPane.columnIndex="0" GridPane.rowIndex="0"></Button>
+    <!-- we need to reference this in controller class, so set an fx:id-->
+    <ListView fx:id="listView" GridPane.rowIndex="1" GridPane.columnIndex="0"></ListView>
+    <ProgressBar fx:id="progressBar" GridPane.rowIndex="2" GridPane.columnIndex="0"></ProgressBar>
+    <Label fx:id="progressLabel" GridPane.rowIndex="3" GridPane.columnIndex="0"></Label>
+</GridPane>

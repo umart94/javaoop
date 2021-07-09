@@ -1,0 +1,15 @@
+create a new module called ui
+add module descriptor file.
+cut the ui package from commons package and move it to the newly created  ui module.
+
+cleanup the previous module-info files for modules.
+
+
+so the solution is that 
+
+1. commons module - HAS NO DEPENDENCY
+2. db module - has dependency on commons module and sqlite library.
+3. ui module - has dependency on the commons and db module
+
+
+in this way, each thing is referenced in minimal numbers and we have no cyclic dependency problem.

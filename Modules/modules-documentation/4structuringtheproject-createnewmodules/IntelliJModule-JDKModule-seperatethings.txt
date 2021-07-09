@@ -1,0 +1,51 @@
+1 intellij module equals to 1 java jdk module.
+so as to avoid confusion.
+
+in that way we only need to add 1 module descriptor to that module.
+
+
+move all classes into module initially
+
+and later, move those classes into other modules.
+
+this will be done temporarily., later on we will move those classes to 
+any other number of modules.
+
+if there are many packages, we can hide empty middle packages.
+
+
+afterwards, from previous project, right click src folder and delete the package 
+
+src -> sample -> model.
+
+delete src dir entirely.
+
+
+
+now since we refactored the classes to another module
+we need to either sync imports
+
+or manually import each class, from the module we just created.
+
+as well as delete the old import statements of package files.
+
+module cannot find the driver for the sqlite database
+
+
+remove the dependency from the project ( libraries tab)
+add it inside the module. ( modules tab, inside module we created -> add jar file)
+
+
+it runs in this way.
+"C:\Program Files\Java\jdk-9.0.1\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\lib\idea_rt.jar=22919:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\bin" -Dfile.encoding=UTF-8 -classpath D:\github\programming\javaoop\Modules\music-ui-start\out\production\academy.learnprogramming.common;D:\github\programming\javaoop\Modules\music-ui-start\libs\sqlite-jdbc-3.21.0.jar academy.learnprogramming.ui.Main
+
+
+if fx:controller="academy.learnprogramming.ui.Controller" is not updated or 
+
+its not updated in code here
+
+  FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+        Parent root = loader.load();
+
+then the code will not run, manually update this reference.
+

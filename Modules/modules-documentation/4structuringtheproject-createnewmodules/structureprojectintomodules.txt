@@ -1,0 +1,17 @@
+split project into 3 modules. (for e.g)
+
+1. common ( common code, business logic)
+
+1ST MODULE : common
+classes : album, artist
+
+2. gui
+
+2nd Module : UI
+classes : controller,main,main.fxml
+
+3. database
+
+3rd Module : db
+
+classes : DataSource
